@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz - IncluiGame</title>
+
+  <!-- Ícones -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="quiz-body">
+
+<div class="quiz-container">
+
+  <!-- TOPO -->
+  <div class="quiz-topo">
+
+    <button class="voltar">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+
+    <div class="status">
+      ⭐ 250
+    </div>
+
+    <div class="xp-container">
+      <div class="xp-barra"></div>
+    </div>
+
+    <div class="vidas">
+      ❤️ 3
+    </div>
+
+  </div>
+
+  <!-- CARD -->
+  <div class="quiz-card">
+
+    <span class="nivel">Nível 2</span>
+
+    <h3>Responda a pergunta:</h3>
+
+    <h1>8 + 5 = ?</h1>
+
+    <div class="alternativas">
+
+      <button onclick="verificarResposta(10)">
+        10
+      </button>
+
+      <button onclick="verificarResposta(12)">
+        12
+      </button>
+
+      <button onclick="verificarResposta(13)">
+        13
+      </button>
+
+      <button onclick="verificarResposta(14)">
+        14
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- RESULTADO -->
+  <div class="resultado" id="resultado">
+    Muito bem! 🎉 +10 moedas
+  </div>
+
+  <!-- PRÓXIMO -->
+  <button class="proximo">
+    Próxima
+  </button>
+
+</div>
+
+<script src="js/quiz.js"></script>
+</body>
+</html>

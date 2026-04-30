@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Criar Atividade</title>
+
+  <!-- Ícones -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="atividade-body">
+
+<div class="layout-professor">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar-professor">
+
+    <h2>📘</h2>
+
+    <nav>
+      <a href="#"><i class="fa-solid fa-house"></i></a>
+      <a href="#"><i class="fa-solid fa-book"></i></a>
+      <a href="#"><i class="fa-solid fa-chart-line"></i></a>
+      <a href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+    </nav>
+
+  </aside>
+
+  <!-- CONTEÚDO -->
+  <main class="conteudo-professor">
+
+    <!-- TOPO -->
+    <header class="topo-professor">
+      <div>
+        <h1>Criar Nova Atividade ✨</h1>
+        <p>Cadastre uma atividade gamificada para os alunos.</p>
+      </div>
+    </header>
+
+    <!-- FORMULÁRIO -->
+    <section class="formulario-card">
+
+      <div class="campo">
+        <label>Título da atividade</label>
+        <input type="text" placeholder="Digite o título">
+      </div>
+
+      <div class="campo">
+        <label>Matéria</label>
+
+        <select>
+          <option>Matemática</option>
+          <option>Português</option>
+          <option>Ciências</option>
+          <option>História</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label>Nível de dificuldade</label>
+
+        <select>
+          <option>Fácil</option>
+          <option>Médio</option>
+          <option>Difícil</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label>Pergunta</label>
+
+        <textarea placeholder="Digite a pergunta"></textarea>
+      </div>
+
+      <!-- ALTERNATIVAS -->
+      <div class="alternativas-form">
+
+        <input type="text" placeholder="Alternativa A">
+        <input type="text" placeholder="Alternativa B">
+        <input type="text" placeholder="Alternativa C">
+        <input type="text" placeholder="Alternativa D">
+
+      </div>
+
+      <div class="campo">
+        <label>Resposta correta</label>
+
+        <select>
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+          <option>D</option>
+        </select>
+      </div>
+
+      <!-- BOTÕES -->
+      <div class="acoes-form">
+
+        <button class="cancelar">
+          Cancelar
+        </button>
+
+        <button class="salvar" onclick="salvarAtividade()">
+          Salvar Atividade
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="js/crud.js"></script>
+</body>
+</html>
