@@ -2,26 +2,82 @@
 <html lang="pt-BR">
 <head> 
     <meta charset="UTF-8">
-    <title>IncluirGame</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <title>IncluiGame - Login</title>
 </head>
-<body class="login-body">
+<body>
 
     <div class="login-container">
 
         <div class="logo">
-           <h1>🎮 IncluirGame</h1>
-           <p>Aprender é jogar junto!</p>
+            <img src="Img/logo_ig.jpeg" alt="IncluiGame">
+           <p><i class="fa fa-gamepad"></i> 
+            Aprender é jogar junto!</p>
         </div>
-       <h2>Bem-vindo de volta!</h2>
-      
-       <input type="email" placeholder="E-mail">
-       <input type="password" placeholder="Senha">
+       
 
-       <button onclick="login()">Entrar</button>
+       <div class="login-box">
+        <h2>Bem-vindo de volta!</h2>
+        <p class="subtitle">Faça login para continuar</p>
+          
+        <form id="loginForm" onsubmit="event.preventDefault(); login();">
+    <div class="input-container">
+        <i class="fa fa-envelope"></i>
+        <input type="email" name="email" placeholder="Digite o seu email" required>
+    </div>
+
+    <div class="input-container">
+        <input type="password" name="senha" placeholder="Digite a sua senha" required>
+        <i class="fa fa-eye btn-eye" id="togglePassword" style="cursor: pointer;"></i>
+    </div>
+
+    <a href="#" class="forgot-link">Esqueceu sua senha?</a>
+    
+    <button type="submit">Entrar</button>
+
+    <p class="cadastro">Ainda não tem conta? 
+        <a href="cadastro.html">Cadastre-se</a>
+    </p>
+</form>
+
+    </div>
+      
+   
+        <p class="footer-description">Plataforma de educação gamificada para inclusão e aprendizagem</p>
+
+        <div class="accessibility-bar">
+        <!--Libras-->
+        <button class="acc-btn libras" title="Libras">
+            <i class="fa fa-hand-paper-o"></i>
+           </button>
+        <!--Tamanho da fonte--->
+           <button class="acc-btn text-size" title="Tamanho da Fonte">
+            <i class="fa fa-font"></i>
+           </button>
+           <!--Audio-->
+           <button class="acc-btn audio" title="Ouvir texto">
+            <i class="fa fa-volume-up"></i>
+           </button>
+           <!--Contrast-->
+           <button class="acc-btn contrast" title="Alto contraste">
+            <i class="fa fa-adjust"></i>
+           </button>
+        </div>
     </div>
     
-    
-    <script src="js/login.js"></script>
+<script src="js/login.js"></script>
+
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
 </body>
 </html>

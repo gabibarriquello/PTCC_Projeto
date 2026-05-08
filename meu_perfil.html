@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IncluiGame - Meu Perfil</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  
+</head>
+<body>
+
+<div class="layout-sistema">
+  
+
+  <main class="conteudo-principal">
+    <div class="card-perfil">
+      
+      <div class="topo-perfil">
+        <div class="area-foto" title="Clique para trocar o avatar">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" id="fotoPrincipal" class="foto-usuario">
+          <div class="camera-icon"><i class="fa-solid fa-camera"></i></div>
+        </div>
+        <div>
+          <h2 id="nomeDisplay">Meu Perfil</h2>
+          <span style="background: #e0f2f1; color: var(--verde-principal); padding: 4px 10px; border-radius: 5px; font-size: 11px; font-weight: 700;">CONFIGURAÇÕES</span>
+        </div>
+      </div>
+
+      <div class="galeria-container">
+        <h4>Escolha seu novo avatar:</h4>
+        <div class="lista-avatares">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" class="avatar-item" onclick="mudarAvatar(this.src)">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ane" class="avatar-item" onclick="mudarAvatar(this.src)">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Milo" class="avatar-item" onclick="mudarAvatar(this.src)">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Luna" class="avatar-item" onclick="mudarAvatar(this.src)">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Oliver" class="avatar-item" onclick="mudarAvatar(this.src)">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Maya" class="avatar-item" onclick="mudarAvatar(this.src)">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Bear" class="avatar-item" onclick="mudarAvatar(this.src)">
+        </div>
+      </div>
+
+      <form class="form-grid">
+        <div class="campo full">
+          <label>Nome Completo</label>
+          <input type="text" id="inputNome" placeholder="Seu nome" onkeyup="atualizarNome(this.value)">
+        </div>
+        <div class="campo">
+          <label>E-mail</label>
+          <input type="email" placeholder="exemplo@email.com">
+        </div>
+        <div class="campo">
+          <label>Telefone</label>
+          <input type="text" placeholder="(00) 00000-0000">
+        </div>
+        <div class="campo">
+          <label>Nova Senha</label>
+          <input type="password" placeholder="••••••••">
+        </div>
+        <div class="campo">
+          <label>Confirmar Senha</label>
+          <input type="password" placeholder="••••••••">
+        </div>
+
+        <div class="footer-perfil full">
+          <button type="button" class="btn btn-cancelar">Descartar</button>
+          <button type="submit" class="btn btn-salvar">Salvar Alterações</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
+
+<script>// Função para mudar a foto principal ao clicar na galeria
+  function mudarAvatar(url) {
+    document.getElementById('fotoPrincipal').src = url;
+    
+    // Feedback visual opcional: remover borda de todos e colocar na selecionada
+    const itens = document.querySelectorAll('.avatar-item');
+    itens.forEach(item => item.classList.remove('selected'));
+    event.target.classList.add('selected');
+  }
+
+  // Função para atualizar o nome no topo em tempo real (Efeito legal de front-end)
+  function atualizarNome(valor) {
+    const display = document.getElementById('nomeDisplay');
+    display.innerText = valor.length > 0 ? valor : "Meu Perfil";
+  }
+</script>
+
+</body>
+</html>

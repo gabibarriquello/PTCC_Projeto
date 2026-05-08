@@ -5,138 +5,65 @@
     <meta charset="UTF-8">
 
     <title>Dashboard do Aluno</title>
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- FONT AWESOME -->
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
+   <header>
+    <h1>IncluirGame</h1>
+    <p>Olá, Aluno! O que vamos aprender hoje?</p>
+   </header>
 
-    <div class="layout">
+   <main class="dashboard-grid">
+    <a href="jogos.html" class="card jogos">
+     <i class="fa fa-gamepad"></i>
+     <span>Jogos</span>
+    </a>
 
-        <!-- SIDEBAR -->
-        <aside class="sidebar">
+    <a href="atividade.html" class="card atividades">
+        <i class="fa fa-pencil-alt"></i>
+        <span>Atividades</span>
+    </a>
 
-            <h2>🎮</h2>
+    <a href="conquistas.html" class="card conquistas">
+        <i class="fa fa-trophy"></i>
+        <span>Conquistas</span>
+    </a>
 
-            <nav>
+    <a href="meu_perfil.html" class="card perfil">
+        <i class="fa fa-user-circle"></i>
+        <span>Meu Perfil</span>
+    </a>
+   </main>
 
-                <!-- HOME -->
-                <a href="aluno_dashboard.html">
-                    <i class="fa-solid fa-house"></i>
-                </a>
-
-                <!-- QUIZ / ATIVIDADES -->
-                <a href="atividade.html">
-                    <i class="fa-solid fa-book"></i>
-                </a>
-
-                <!-- RELATÓRIOS -->
-                <a href="relatorios.html">
-                    <i class="fa-solid fa-trophy"></i>
-                </a>
-
-                <!-- PERFIL -->
-                <a href="perfil.html">
-                    <i class="fa-solid fa-user"></i>
-                </a>
-
-            </nav>
-
-        </aside>
-
-        <!-- CONTEÚDO -->
-        <main class="content">
-
-            <!-- TOPO -->
-            <header class="topo">
-
-                <h2 id="saudacao"></h2>
-
-                <img src="https://i.pravatar.cc/40" class="avatar">
-
-            </header>
-
-            <!-- CARDS -->
-            <section class="cards">
-
-                <div class="card-info">
-                    ⭐ Nível <span id="nivel"></span>
-                </div>
-
-                <div class="card-info">
-                    🪙 Moedas <span id="moedas"></span>
-                </div>
-
-                <div class="card-info">
-                    💚 XP <span id="xp"></span>
-                </div>
-
-            </section>
-
-            <!-- ATIVIDADES -->
-            <section>
-
-                <h3>Atividades para você</h3>
-
-                <div class="atividades">
-
-                    <div class="atividade-card">
-
-                        <p>Matemática Divertida</p>
-
-                        <button onclick="ganharPontos(10)">
-                            Iniciar
-                        </button>
-
-                    </div>
-
-                    <div class="atividade-card">
-
-                        <p>Português em Aventura</p>
-
-                        <button onclick="ganharPontos(20)">
-                            Iniciar
-                        </button>
-
-                    </div>
-
-                    <div class="atividade-card">
-
-                        <p>Ciências em Missão</p>
-
-                        <button onclick="ganharPontos(30)">
-                            Iniciar
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-            <!-- PROGRESSO -->
-            <section>
-
-                <h3>Seu Progresso</h3>
-
-                <div class="barra">
-                    <div id="barraProgresso"></div>
-                </div>
-
-            </section>
-
-        </main>
-
+   <div class="footer-acc">
+       <button class="acc-btn text-size">AA</button>
+       <button class="acc-btn contrast"><i class="fa fa-adjust"></i></button>
+       <button class="acc-btn audio"><i class="fa fa-volume-up"></i></button>
+       <button class="acc-btn libras"><i class="fa fa-hands-helping"></i></button>
+   </div>
+  <!--parte de acessbilidade-->
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
     </div>
+</div>
 
-    <!-- JS -->
-    <script type="module" src="js/script.js"></script>
+   <script src="js/login.js"></script>
+ <!--Avatar das libras-->
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script> 
 
 </body>
-
 </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IncluiGame - Aulas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+<div class="layout-atividade">
+  
+  <header class="header-atividade">
+    <a href="atividade.html" class="btn-sair">
+      <i class="fa-solid fa-xmark"></i> Sair da Aula
+    </a>
+    <div style="flex: 1; margin: 0 50px;">
+      <div style="height: 8px; background: #e2e8f0; border-radius: 10px;">
+        <div style="width: 40%; height: 100%; background: var(--verde-principal); border-radius: 10px;"></div>
+      </div>
+    </div>
+    <span style="font-weight: 600; font-size: 14px;">40% Concluído</span>
+  </header>
+
+  <main class="container-aula">
+    <article class="card-aula">
+      <span class="badge-materia" id="materiaTag" style="background-color: #3b82f6;">Matemática</span>
+      <h1 id="tituloAtividade">Título da Atividade Carregada</h1>
+      
+      <div class="video-placeholder">
+        <i class="fa-solid fa-play-circle fa-4x"></i>
+        <p style="margin-left: 15px;">O vídeo ou jogo carregaria aqui</p>
+      </div>
+
+      <div class="texto-aula">
+        <p>Este é um template dinâmico. O conteúdo que você está lendo agora pode ser substituído por qualquer instrução que o professor criou na tela de "Criar Atividade".</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer-aula">
+    <button class="btn-acao btn-voltar">Anterior</button>
+    <button class="btn-acao btn-proximo">Concluir Atividade</button>
+  </footer>
+
+</div>
+
+<script>
+  // Simulação de como o Front-end "entende" qual aula abrir
+  // No futuro, o Backend passará esses dados via URL (ex: ?aula=matematica)
+  function carregarDadosAula() {
+    const params = new URLSearchParams(window.location.search);
+    const materia = params.get('materia');
+
+    if (materia === 'historia') {
+      document.getElementById('materiaTag').innerText = "História";
+      document.getElementById('materiaTag').style.backgroundColor = "#ef4444";
+      document.getElementById('tituloAtividade').innerText = "História em Jornada";
+    }
+    // E assim por diante...
+  }
+
+  window.onload = carregarDadosAula;
+</script>
+
+</body>
+</html>

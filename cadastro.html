@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>IncluiGame - Cadastro</title>
+    </head>
+    <body>
+        <div class="login-container">
+            <h2>Crie sua conta</h2>
+            <p class="subtitle">Junte-se à jornada do IncluiGame!</p>
+
+            <form id="cadastroForm" onsubmit="event.preventDefault(); validarCadastro();">
+                <div class="input-container">
+                    <i class="fa fa-user icon-left"></i>
+                    <input type="text" id="nome" placeholder="Digite o seu nome completo" required>
+                </div>
+
+                <div class="input-container">
+                    <i class="fa fa-envelope icon-left"></i>
+                    <input type="email" id="email" placeholder="Digite seu email" required>
+                </div>
+
+                <div class="input-container">
+                <i class="fa fa-lock icon-left"></i>
+                <input type="password" id="senha" placeholder="Crie uma senha" required>
+            </div>
+
+            <div class="input-container">
+                <i class="fa fa-lock icon-left"></i>
+                <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" required>
+            </div>
+
+            <button type="submit"> Cadastrar</button>
+            </form>
+            <p class="cadastro">
+                Já tem uma conta? <a href="index.html">Faça Login</a>
+            </p>
+        </div>
+
+    <div class="accessibility-bar">
+        <!--Libras-->
+        <button class="acc-btn libras" title="Libras">
+            <i class="fa fa-hand-paper-o"></i>
+           </button>
+        <!--Tamanho da fonte--->
+           <button class="acc-btn text-size" title="Tamanho da Fonte">
+            <i class="fa fa-font"></i>
+           </button>
+           <!--Audio-->
+           <button class="acc-btn audio" title="Ouvir texto">
+            <i class="fa fa-volume-up"></i>
+           </button>
+           <!--Contrast-->
+           <button class="acc-btn contrast" title="Alto contraste">
+            <i class="fa fa-adjust"></i>
+           </button>
+        </div>
+    </div>
+
+    <!--parte de acessbilidade-->
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+
+<script src="js/login.js"></script>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+    </body>
+</html>

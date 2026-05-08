@@ -1,83 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Quiz - IncluiGame</title>
-
-  <!-- Ícones -->
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IncluiGame - Atividades</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="quiz-body">
+<body>
 
-<div class="quiz-container">
+    <header class="header-atividades">
+        <h2>Minhas Atividades</h2>
+        <p>Escolha uma tarefa e comece a aprender!</p>
+    </header>
 
-  <!-- TOPO -->
-  <div class="quiz-topo">
+    <main class="atividades-container" id="listaAtividades">
+        
+        <div class="atividade-card matematica">
+            <div class="card-left">
+                <div class="icon-box"><i class="fa fa-calculator"></i></div>
+                <div class="info-box">
+                    <h3>Matemática divetida</h3>
+                    <p>Professor: João Silva</p>
+                </div>
+            </div>
+             <a href="Aulas.html" class="btn-iniciar">Iniciar</a>
+        </div>
 
-    <button class="voltar">
-      <i class="fa-solid fa-arrow-left"></i>
-    </button>
+        <div class="atividade-card portugues">
+            <div class="card-left">
+                <div class="icon-box"><i class="fa fa-book"></i></div>
+                <div class="info-box">
+                    <h3>Português em Aventura</h3>
+                    <p>Professora: Maria Souza</p>
+                </div>
+            </div>
+            <a href="Aulas.html" class="btn-iniciar">Iniciar</a>
+        </div>
 
-    <div class="status">
-      ⭐ 250
+        <div class="atividade-card historia">
+          <div class="card-left">
+            <div class="icon-box"><i class="fa fa-scroll"></i></div>
+            <div class="info-box">
+                <h3>História em jornada</h3>
+            <p>Professora: Ana Paula</p>
+            </div>
+            </div>
+           <a href="Aulas.html" class="btn-iniciar">Iniciar</a>
+        </div>
+
+        <div class="atividade-card geografia">
+            <div class="card-left">
+                <div class="icon-box"><i class="fa fa-book"></i></div>
+                <div class="info-box">
+                    <h3>Geográfia sem Fronteiras</h3>
+                    <p>Professor: José Bezerra</p>
+                </div>
+            </div>
+             <a href="Aulas.html" class="btn-iniciar">Iniciar</a>
+        </div>
+
+        <div class="atividade-card ciencias">
+            <div class="card-left">
+              <div class="icon-box"><i class="fa fa-atom"></i></div> 
+              <div class="info-box">
+                <h3>Ciências em Missão</h3>
+                <p>Professor: Davi Oliveira</p>
+              </div>
+            </div>
+            <a href="Aulas.html" class="btn-iniciar">Iniciar</a>
+        </div>
+        
+
+    </main>
+
+    <div class="accessibility-bar">
+        <!--Libras-->
+        <button class="acc-btn libras" title="Libras">
+            <i class="fa fa-hand-paper-o"></i>
+           </button>
+        <!--Tamanho da fonte--->
+           <button class="acc-btn text-size" title="Tamanho da Fonte">
+            <i class="fa fa-font"></i>
+           </button>
+           <!--Audio-->
+           <button class="acc-btn audio" title="Ouvir texto">
+            <i class="fa fa-volume-up"></i>
+           </button>
+           <!--Contraste-->
+           <button class="acc-btn contrast" title="Alto contraste">
+            <i class="fa fa-adjust"></i>
+           </button>
+        </div>
+
+    <script src="js/login.js"></script> 
+
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
     </div>
-
-    <div class="xp-container">
-      <div class="xp-barra"></div>
-    </div>
-
-    <div class="vidas">
-      ❤️ 3
-    </div>
-
-  </div>
-
-  <!-- CARD -->
-  <div class="quiz-card">
-
-    <span class="nivel">Nível 2</span>
-
-    <h3>Responda a pergunta:</h3>
-
-    <h1>8 + 5 = ?</h1>
-
-    <div class="alternativas">
-
-      <button onclick="verificarResposta(10)">
-        10
-      </button>
-
-      <button onclick="verificarResposta(12)">
-        12
-      </button>
-
-      <button onclick="verificarResposta(13)">
-        13
-      </button>
-
-      <button onclick="verificarResposta(14)">
-        14
-      </button>
-
-    </div>
-
-  </div>
-
-  <!-- RESULTADO -->
-  <div class="resultado" id="resultado">
-    Muito bem! 🎉 +10 moedas
-  </div>
-
-  <!-- PRÓXIMO -->
-  <button class="proximo">
-    Próxima
-  </button>
-
 </div>
-
-<script src="js/quiz.js"></script>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
 </body>
 </html>

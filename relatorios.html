@@ -2,182 +2,93 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Relatórios</title>
-
-  <!-- Ícones -->
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IncluiGame - Relatórios</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="relatorio-body">
+<body>
 
 <div class="layout-professor">
-
-  <!-- SIDEBAR -->
   <aside class="sidebar-professor">
-
-    <h2>📘</h2>
-
     <nav>
-      <a href="#"><i class="fa-solid fa-house"></i></a>
-      <a href="#"><i class="fa-solid fa-book"></i></a>
-      <a href="#"><i class="fa-solid fa-chart-line"></i></a>
-      <a href="#"><i class="fa-solid fa-file"></i></a>
-      <a href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+      <a href="relatorios.html"><i class="fa-solid fa-house"></i>Início</a>
+      <a href="turmas.html"><i class="fa-solid fa-users"></i>Alunos</a>
+      <a href="criar_atividade.html"><i class="fa-solid fa-book"></i>Atividades</a>
+      <a href="relatorios.html" class="active"><i class="fa-solid fa-chart-line"></i>Relatórios</a>
     </nav>
-
   </aside>
 
-  <!-- CONTEÚDO -->
   <main class="conteudo-professor">
+    <section class="container-relatorio">
+      
+      <header class="header-relatorio">
+        <a href="#" class="btn-voltar-circulo"><i class="fa-solid fa-arrow-left"></i></a>
+        <div>
+          <h2 style="font-size: 22px;">Relatórios</h2>
+          <p style="color: var(--cinza-texto); font-size: 13px;">Acompanhe o desempenho dos alunos.</p>
+        </div>
+      </header>
 
-    <!-- TOPO -->
-    <header class="topo-professor">
-
-      <div>
-        <h1>Relatórios 📊</h1>
-        <p>Acompanhe o desempenho dos alunos.</p>
+      <div class="selecao-aluno">
+        <label style="font-weight: 600; font-size: 14px;">Selecione o aluno:</label>
+        <select>
+          <option>Ana Vitória</option>
+          <option>Bruno Garcia</option>
+          <option>Carla Souza</option>
+        </select>
       </div>
 
-    </header>
-
-    <!-- MÉTRICAS -->
-    <section class="cards-professor">
-
-      <div class="card-professor">
-        <h3>Total de Atividades</h3>
-        <h1>42</h1>
+      <div class="grid-metricas">
+        <div class="card-metrica">
+          <p>Média Geral</p>
+          <h4>8,7</h4>
+          <i class="fa-solid fa-chart-line" style="color: #22c55e;"></i>
+        </div>
+        <div class="card-metrica">
+          <p>Atividades Concluídas</p>
+          <h4>18/22</h4>
+          <i class="fa-regular fa-circle-check" style="color: #16a394;"></i>
+        </div>
+        <div class="card-metrica">
+          <p>Sequência</p>
+          <h4>5 dias</h4>
+          <i class="fa-solid fa-fire" style="color: #f59e0b;"></i>
+        </div>
+        <div class="card-metrica">
+          <p>Moedas</p>
+          <h4>250</h4>
+          <i class="fa-solid fa-coins" style="color: #eab308;"></i>
+        </div>
       </div>
 
-      <div class="card-professor">
-        <h3>Alunos Ativos</h3>
-        <h1>28</h1>
-      </div>
+      <div class="sessao-detalhes">
+        <h3>Desempenho por Atividade</h3>
 
-      <div class="card-professor">
-        <h3>Taxa de Acertos</h3>
-        <h1>87%</h1>
-      </div>
+        <div class="item-progresso">
+          <div class="info-progresso"><span>Matemática Divertida</span> <span>90%</span></div>
+          <div class="barra-externa"><div class="barra-interna bg-verde" style="width: 90%;"></div></div>
+        </div>
 
-      <div class="card-professor">
-        <h3>Tempo Médio</h3>
-        <h1>15 min</h1>
+        <div class="item-progresso">
+          <div class="info-progresso"><span>Português em Aventura</span> <span>75%</span></div>
+          <div class="barra-externa"><div class="barra-interna bg-verde" style="width: 75%;"></div></div>
+        </div>
+
+        <div class="item-progresso">
+          <div class="info-progresso"><span>Mundo Sustentável</span> <span>60%</span></div>
+          <div class="barra-externa"><div class="barra-interna bg-amarelo" style="width: 60%;"></div></div>
+        </div>
+
+        <div class="item-progresso">
+          <div class="info-progresso"><span>Ciências em Missão</span> <span>85%</span></div>
+          <div class="barra-externa"><div class="barra-interna bg-verde" style="width: 85%;"></div></div>
+        </div>
       </div>
 
     </section>
-
-    <!-- ÁREA CENTRAL -->
-    <section class="relatorio-grid">
-
-      <!-- GRÁFICO -->
-      <div class="grafico-relatorio">
-
-        <h3>Desempenho semanal</h3>
-
-        <div class="grafico-barras">
-
-          <div class="barra-item">
-            <div class="barra-vertical h1"></div>
-            <span>Seg</span>
-          </div>
-
-          <div class="barra-item">
-            <div class="barra-vertical h2"></div>
-            <span>Ter</span>
-          </div>
-
-          <div class="barra-item">
-            <div class="barra-vertical h3"></div>
-            <span>Qua</span>
-          </div>
-
-          <div class="barra-item">
-            <div class="barra-vertical h4"></div>
-            <span>Qui</span>
-          </div>
-
-          <div class="barra-item">
-            <div class="barra-vertical h5"></div>
-            <span>Sex</span>
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- RANKING -->
-      <div class="ranking-card">
-
-        <h3>Ranking dos alunos 🏆</h3>
-
-        <div class="ranking-item">
-          🥇 Ana Clara - 2500 XP
-        </div>
-
-        <div class="ranking-item">
-          🥈 João Pedro - 2200 XP
-        </div>
-
-        <div class="ranking-item">
-          🥉 Maria Eduarda - 2000 XP
-        </div>
-
-        <div class="ranking-item">
-          ⭐ Lucas - 1800 XP
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- TABELA -->
-    <section class="tabela-section">
-
-      <h3>Últimas atividades</h3>
-
-      <table>
-
-        <thead>
-          <tr>
-            <th>Aluno</th>
-            <th>Atividade</th>
-            <th>Status</th>
-            <th>Pontuação</th>
-          </tr>
-        </thead>
-
-        <tbody>
-
-          <tr>
-            <td>Ana Clara</td>
-            <td>Matemática Divertida</td>
-            <td>Concluído</td>
-            <td>95</td>
-          </tr>
-
-          <tr>
-            <td>João Pedro</td>
-            <td>Português em Aventura</td>
-            <td>Concluído</td>
-            <td>88</td>
-          </tr>
-
-          <tr>
-            <td>Lucas</td>
-            <td>Ciências em Missão</td>
-            <td>Pendente</td>
-            <td>--</td>
-          </tr>
-
-        </tbody>
-
-      </table>
-
-    </section>
-
   </main>
-
 </div>
 
 </body>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IncluiGame - Minhas Conquistas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-conquistas">
+        <a href="aluno_dashboard.html" class="btn-voltar"><i class="fa fa-arrow-left"></i></a>
+        <h2>Minhas Conquistas</h2>
+    </header>
+
+    <section class="status-container">
+        <div class="status-card">
+            <i class="fa fa-coins" style="color: var(--amarelo-ouro);"></i>
+            <div class="status-info">
+                <h4>Moedas Totais</h4>
+                <p>250</p>
+            </div>
+        </div>
+        <div class="status-card">
+            <i class="fa fa-fire" style="color: #FF5722;"></i>
+            <div class="status-info">
+                <h4>Sequência</h4>
+                <p>5 Dias</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="medalhas-section">
+        <h3>Medalhas Desbloqueadas</h3>
+        <div class="medalhas-grid">
+            
+            <div class="medalha-card">
+                <div class="medalha-icon" style="color: #4CAF50;"><i class="fa fa-user-plus"></i></div>
+                <h4>Pioneiro</h4>
+                <p>Criou sua conta no IncluiGame!</p>
+            </div>
+
+            <div class="medalha-card">
+                <div class="medalha-icon" style="color: #2196F3;"><i class="fa fa-book-open"></i></div>
+                <h4>Leitor Ávido</h4>
+                <p>Completou 5 aulas de Português.</p>
+            </div>
+
+            <div class="medalha-card">
+                <div class="medalha-icon" style="color: #FF9800;"><i class="fa fa-bolt"></i></div>
+                <h4>Super Veloz</h4>
+                <p>Terminou um jogo em menos de 2 minutos.</p>
+            </div>
+
+            <div class="medalha-card bloqueada">
+                <div class="medalha-icon"><i class="fa fa-calculator"></i></div>
+                <h4>Gênio da Matemática</h4>
+                <p>Acerte 10 questões sem errar.</p>
+            </div>
+
+            <div class="medalha-card bloqueada">
+                <div class="medalha-icon"><i class="fa fa-trophy"></i></div>
+                <h4>Grande Campeão</h4>
+                <p>Complete todas as atividades da semana.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="accessibility-bar">
+        <button class="acc-btn libras"><i class="fa fa-hand-paper"></i></button>
+        <button class="acc-btn text-size"><i class="fa fa-font"></i></button>
+        <button class="acc-btn audio"><i class="fa fa-volume-up"></i></button>
+        <button class="acc-btn contrast"><i class="fa fa-adjust"></i></button>
+    </div>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+</body>
+</html>
